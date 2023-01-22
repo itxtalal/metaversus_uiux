@@ -5,6 +5,10 @@ interface TypingTextProps {
   title: string;
   textStyles?: string;
 }
+interface TitleTextProps {
+  title: string | JSX.Element;
+  textStyles?: string;
+}
 
 export const TypingText = ({ title, textStyles }: TypingTextProps) => (
   <motion.p
@@ -19,6 +23,13 @@ export const TypingText = ({ title, textStyles }: TypingTextProps) => (
   </motion.p>
 );
 
-export const TitleText = ({ title, textStyles }: TypingTextProps) => (
-  <h2>Title Text</h2>
+export const TitleText = ({ title, textStyles }: TitleTextProps) => (
+  <motion.h2
+    variants={textVariant2}
+    initial="hidden"
+    whileInView="show"
+    className={`mt-[8px] font-bold md:text-[62px] text-[40px] text-white ${textStyles}`}
+  >
+    {title}
+  </motion.h2>
 );
