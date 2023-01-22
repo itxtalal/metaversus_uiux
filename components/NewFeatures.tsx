@@ -1,7 +1,7 @@
 import styles from '@/styles';
 
 interface NewFeaturesProps {
-  key: number;
+  key: string;
   title: string;
   subtitle: string;
   imgUrl: string;
