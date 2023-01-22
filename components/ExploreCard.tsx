@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import styles from '@/styles';
 import { fadeIn, navVariants } from '@/utils/motion';
+import Image from 'next/image';
 
 interface ExploreCardProps {
   id: string;

@@ -41,15 +41,17 @@ export const slideIn = (
   },
 });
 
-export const staggerContainer = (staggerChildren, delayChildren) => ({
-  hidden: {},
+export const staggerContainer = {
+  hidden: {
+    opacity: 0,
+  },
   show: {
+    opacity: 1,
     transition: {
-      staggerChildren,
-      delayChildren,
+      staggerChildren: 0.1, // delay between each child animation
     },
   },
-});
+};
 
 export const textVariant = (delay: number) => ({
   hidden: {

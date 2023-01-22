@@ -1,12 +1,15 @@
 'use client';
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { textContainer, textVariant2 } from '@/utils/motion';
+
 interface TypingTextProps {
   title: string;
   textStyles?: string;
 }
 interface TitleTextProps {
-  title: string | JSX.Element;
+  title: string | React.ReactNode;
   textStyles?: string;
 }
 
@@ -33,3 +36,10 @@ export const TitleText = ({ title, textStyles }: TitleTextProps) => (
     {title}
   </motion.h2>
 );
+
+TypingText.defaultProps = {
+  textStyles: '',
+};
+TitleText.defaultProps = {
+  textStyles: '',
+};
