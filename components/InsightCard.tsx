@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 
 import { fadeIn } from '@/utils/motion';
+import Image from 'next/image';
 
 interface InsightCardProps {
   number: number;
@@ -16,7 +17,9 @@ const InsightCard = ({ title, number, subtitle, imgUrl }: InsightCardProps) => (
     variants={fadeIn('up', 'spring', number * 0.5, 1)}
     className="flex md:flex-row flex-col gap-4"
   >
-    <img
+    <Image
+      width={270}
+      height={250}
       src={imgUrl}
       alt="planet-01"
       className="md:w-[270px] w-full h-[250px] rounded-[32px] object-cover"
@@ -31,8 +34,10 @@ const InsightCard = ({ title, number, subtitle, imgUrl }: InsightCardProps) => (
     </div>
 
     <div className="lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full bg-transparent border border-white">
-      <img
+      <Image
         src="arrow.svg"
+        width={24}
+        height={24}
         alt="arrow"
         className="w-[40%] h-[40%] object-contain"
       />

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import styles from '@/styles';
 import { fadeIn, staggerContainer, zoomIn } from '@/utils/motion';
+import Image from 'next/image';
 
 const Feedback = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -38,7 +39,9 @@ const Feedback = () => (
         variants={fadeIn('left', 'tween', 0.2, 1)}
         className="relative flex flex-1 justify-center items-center"
       >
-        <img
+        <Image
+          width={1920}
+          height={610}
           src="/planet-09.webp"
           alt="planet-09"
           className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
@@ -48,7 +51,9 @@ const Feedback = () => (
           variants={zoomIn(0.4, 1)}
           className="lg:block hidden absolute -left-[10%] top-[3%]"
         >
-          <img
+          <Image
+            width={155}
+            height={155}
             src="/stamp.webp"
             alt="stamp"
             className="w-[155px] h-[155px] object-contain"

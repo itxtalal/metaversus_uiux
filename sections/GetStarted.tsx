@@ -5,6 +5,7 @@ import styles from '@/styles';
 import { fadeIn, planetVariants, staggerContainer } from '@/utils/motion';
 import { StartSteps, TitleText, TypingText } from '@/components';
 import { startingFeatures } from '@/constants';
+import Image from 'next/image';
 
 const GetStarted = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -19,7 +20,9 @@ const GetStarted = () => (
         variants={planetVariants('left')}
         className={`${styles.flexCenter} flex-1`}
       >
-        <img
+        <Image
+          width={500}
+          height={500}
           src="/get-started.webp"
           alt="get started"
           className="w-[90%] h-[90%] object-contain"

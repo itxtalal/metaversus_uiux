@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import styles from '@/styles';
 import { slideIn, staggerContainer, textVariant } from '@/utils/motion';
+import Image from 'next/image';
 
 const Hero = () => (
   <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
@@ -32,16 +33,21 @@ const Hero = () => (
         className="relative w-full md:-mt-[20px] -mt-[12px]"
       >
         <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]"></div>
-        <img
+
+        <Image
           src="/cover.webp"
+          width={1920}
+          height={500}
           alt="cover"
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
         />
 
         <a href="#explore">
           <div className="w-full relative flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] z-10">
-            <img
+            <Image
               src="/stamp.webp"
+              width={155}
+              height={155}
               alt="stamp"
               className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
             />

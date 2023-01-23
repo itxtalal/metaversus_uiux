@@ -10,6 +10,7 @@ import {
 } from '@/utils/motion';
 import { NewFeatures, TitleText, TypingText } from '@/components';
 import { newFeatures } from '@/constants';
+import Image from 'next/image';
 
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -37,7 +38,9 @@ const WhatsNew = () => (
         variants={planetVariants('right')}
         className={`${styles.flexCenter} flex-1`}
       >
-        <img
+        <Image
+          width={500}
+          height={500}
           src="/whats-new.webp"
           alt="whats new"
           className="w-[90%] h-[90%] object-contain"
