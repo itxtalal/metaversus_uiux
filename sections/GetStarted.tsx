@@ -20,7 +20,7 @@ const GetStarted = () => (
         className={`${styles.flexCenter} flex-1`}
       >
         <img
-          src="/get-started.png"
+          src="/get-started.webp"
           alt="get started"
           className="w-[90%] h-[90%] object-contain"
         />
